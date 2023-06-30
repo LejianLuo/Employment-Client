@@ -1,8 +1,7 @@
 import axios from "axios";
 
  export const api=axios.create({
-    baseURL: 'http://localhost:4000',
+    baseURL: 'employment-server-production.up.railway.app',
     withCredentials: true
   });
-
-
+//http://localhost:4000
