@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setUsername } from "../store/userSlice";
 import { loadApplications } from "../store/userSlice";
+import Cookies from "universal-cookie";
 
 
 export default function Login() {
@@ -15,6 +16,7 @@ export default function Login() {
   const passwordInput=useRef();
 
   const navigate = useNavigate();
+  const cookies=new Cookies();
   const dispatch=useDispatch();
 
   function verifyEmail(email){
@@ -45,6 +47,7 @@ export default function Login() {
     .then((res)=>{
         dispatch(setUsername(res.data.email));
         dispatch(loadApplications(res.data.email));
+        cookies.set('token',res.data.token);
         navigate('/');
     }).catch(err=>setServerWarn(err.response.data.message));
 
