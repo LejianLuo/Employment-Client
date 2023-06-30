@@ -27,7 +27,6 @@ export default function Resume(){
     const location = useLocation();
     const [save, isSaved]=useState(true);
     const cookies = new Cookies();
-    cookies.set('test','test')
     
 
     useEffect(()=>{
