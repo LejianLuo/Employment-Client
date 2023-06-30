@@ -1,0 +1,6 @@
+{
+    "city":["Any","Montreal","Vancouver","Calgary","Toronto","Ottawa"],
+    "salary":["Any",15,20,30,40,50],
+    "type":["Any","Full Time","Contract","Part Time","Temporary"],
+    "industry":["Any","IT","Finance","Education","Media","Retail","Consulting"]
+}
